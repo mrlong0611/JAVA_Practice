@@ -15,23 +15,9 @@
 ### git + maven 的安装和使用
 
 - maven 安装
-    - 下载 maven 最新版本，https://maven.apache.org/download.cgi
-    - 解压下载的安装包（例如：apache-maven-3.6.3-bin.zip）到某个目录
-    - windows 环境下将目录 `maven解压目录\bin` 添加到环境变量 Path 上
-    - mac 环境，在 `~/.bash_profile` 文件中加入一行，然后执行一下 `source ~/.bash_profile` 使之生效
-        ```
-        export PATH=/maven解压目录/bin:$PATH
-        ```
-    - 命令行下执行 `mvn --version`，如果能正确显示版本号，说明安装正确，比如显示内容如下：
-        ```
-        ➜  java-les mvn --version
-        Apache Maven 3.6.1 (d66c9c0b3152b2e69ee9bac180bb8fcc8e6af555; 2019-04-05T03:00:29+08:00)
-        Maven home: /Users/sh/bin/mvn
-        Java version: 1.8.0_212, vendor: Oracle Corporation, runtime: /Library/Java/JavaVirtualMachines/jdk1.8.0_212.jdk/Contents/Home/jre
-        Default locale: zh_CN, platform encoding: UTF-8
-        OS name: "mac os x", version: "10.15", arch: "x86_64", family: "mac"
-        ```
+   已经安装好。
 - 注册 github 账号
+   已经注册好
 - 新建一个项目
     - 登录成功后，点击右上角【+】，在下拉菜单中选择【New repository】
     - 填写项目名（Repository name）和描述（Description）
