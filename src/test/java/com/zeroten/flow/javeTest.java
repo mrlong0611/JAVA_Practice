@@ -33,7 +33,7 @@ public class javeTest {
                     String s1=String.valueOf(arry[j])+String.valueOf(arry[k]);
                     String s2="";
                     if( k<arry.length-1){
-                        s2=String.valueOf(arry[arry.length-1-j])+String.valueOf(arry[arry.length-1-k]);
+                        s2=String.valueOf(arry[k+1])+String.valueOf(arry[6-(2*k+1)-j]);
                     }
                     if(j==0 && k==arry.length-1){
                         s2=String.valueOf(arry[k-1])+String.valueOf(arry[j+1]);
