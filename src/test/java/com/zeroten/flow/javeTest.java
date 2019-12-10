@@ -1,10 +1,8 @@
 package com.zeroten.flow;
 
-import netscape.javascript.JSObject;
 import org.testng.annotations.Test;
-
-import java.sql.Array;
 import java.util.Arrays;
+import java.util.Scanner;
 
 public class javeTest {
 
@@ -65,11 +63,60 @@ public class javeTest {
         System.out.println("吸血鬼数字是" + Arrays.toString(arryTotal));
     }
 
+
+
     @Test
     //回文数
     public void javaTest4(){
 
+        Scanner scanner=new Scanner(System.in);
+        System.out.print("请输入数字：");
+        int num=scanner.nextInt();
+        boolean flag=false;
+        String str =String.valueOf(num);
+        String mun="";
+        if(num<0){
+            StringBuffer sb = new StringBuffer();
+            char[] ch = str.toCharArray();
+            for(int j=ch.length-1; j>=0; j--){
+                sb.append(ch[j]);
+            }
+            mun=sb.toString();
+        }
+        if(num>0 ){
+            for (int i=0;i<str.length();i++){
+                char S1= str.charAt(0);
+                char S2= str.charAt(str.length()-1);
+                int Ts1=Integer.parseInt(String.valueOf(S1));
+                int Ts2=Integer.parseInt(String.valueOf(S2));
+                if(i<str.length()-1-i){
+                    if(Ts1!=Ts2){
+                        StringBuffer sb = new StringBuffer();
+                        char[] ch = str.toCharArray();
+                        for(int j=ch.length-1; j>=0; j--){
+                            sb.append(ch[j]);
+                        }
+                        mun=sb.toString();
+                        break;
+                    }
+                    if(Ts1==Ts2){
+                        flag=true;
 
+                    }
+                }else {
+                    break;
+                }
+            }
+        }
+
+        if(!flag){
+            System.out.println("输入数字为："+num);
+            System.out.println("输出为："+flag);
+            System.out.println("解释：从左向右读为："+num+"。"+"从右向左读为："+mun+"."+"因此它不是回文数");
+        }else {
+            System.out.println("输入数字为："+num);
+            System.out.println("输出为："+flag);
+        }
 
     }
 
